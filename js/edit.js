@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 let transaction = sessionStorage.transaction;
+const storageUrl = "//storage.adrianjlane.com";
 
 window.onload = function () {
     if (transaction != "") {
@@ -27,7 +28,7 @@ function cancelUpdate() {
 function getTransaction() {
 
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "//storage.adrianjlane.com:3000/storage/" + transaction);
+    xhr.open("GET", storageUrl + "/storage/" + transaction);
     xhr.send();
 
     xhr.onreadystatechange = function() {
@@ -64,9 +65,9 @@ function updateTransaction() {
 
     let xhr = new XMLHttpRequest();
     if (transaction != "") {
-        xhr.open("PUT", '//storage.adrianjlane.com:3000/storage/' + transaction, true);
+        xhr.open("PUT", storageUrl + '/storage/' + transaction, true);
     } else {
-        xhr.open("POST", '//storage.adrianjlane.com:3000/storage', true);
+        xhr.open("POST", storageUrl + '/storage', true);
     }
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 

@@ -1,5 +1,7 @@
 /*jshint esversion: 6 */
 
+const storageUrl = "//storage.adrianjlane.com";
+
 window.onload = function () {
     getRecords();
 };
@@ -11,7 +13,7 @@ function reqListener (xhr) {
 function getRecords () {
 
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "//storage.adrianjlane.com:3000/storage", true);
+    xhr.open("GET", storageUrl + "/storage", true);
     xhr.send();
 
     xhr.onreadystatechange = function() {
@@ -85,7 +87,7 @@ function createRecord() {
 
 function deleteRecord(id) {
     let xhr = new XMLHttpRequest();
-    xhr.open("DELETE", "//storage.adrianjlane.com:3000/storage/" + id, true);
+    xhr.open("DELETE", storageUrl + "/storage/" + id, true);
     xhr.send();
 
     xhr.onreadystatechange = function() {
