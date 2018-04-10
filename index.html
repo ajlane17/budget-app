@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Budget App</title>
+    <meta name="description" content="Budget App">
+    <meta name="author" content="Adrian Lane">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Budget App</h1>
+        <div id="budgetInfo">
+            <div id="budgetAmount">400</div>
+            <div id="itemTotal">300</div>
+            <div id="budgetRemaining">100</div>
+        </div>
+    </header>
+    <section id="budgetItems">
+        <div id="lineItems">
+            <table id ="transactions">
+                <tr>
+                    <th>Date</th>
+                    <th>Payee</th>
+                    <th>Memo</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+            </table>
+        </div>
+        <div id="buttonArea">
+            <button id="newItemButton" onclick="createRecord()">Add Transaction</button>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
