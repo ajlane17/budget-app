@@ -27,7 +27,7 @@ function cancelUpdate() {
 function getTransaction() {
 
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://storage.adrianjlane.com:3000/storage/" + transaction);
+    xhr.open("GET", "//storage.adrianjlane.com:3000/storage/" + transaction);
     xhr.send();
 
     xhr.onreadystatechange = function() {
@@ -64,9 +64,9 @@ function updateTransaction() {
 
     let xhr = new XMLHttpRequest();
     if (transaction != "") {
-        xhr.open("PUT", 'http://storage.adrianjlane.com:3000/storage/' + transaction, true);
+        xhr.open("PUT", '//storage.adrianjlane.com:3000/storage/' + transaction, true);
     } else {
-        xhr.open("POST", 'http://storage.adrianjlane.com:3000/storage', true);
+        xhr.open("POST", '//storage.adrianjlane.com:3000/storage', true);
     }
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
