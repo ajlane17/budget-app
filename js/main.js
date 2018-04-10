@@ -11,7 +11,7 @@ function reqListener (xhr) {
 function getRecords () {
 
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://127.0.0.1:3000/storage", true);
+    xhr.open("GET", "http://storage.adrianjlane.com:3000/storage", true);
     xhr.send();
 
     xhr.onreadystatechange = function() {
@@ -85,7 +85,7 @@ function createRecord() {
 
 function deleteRecord(id) {
     let xhr = new XMLHttpRequest();
-    xhr.open("DELETE", "http://127.0.0.1:3000/storage/" + id, true);
+    xhr.open("DELETE", "http://storage.adrianjlane.com:3000/storage/" + id, true);
     xhr.send();
 
     xhr.onreadystatechange = function() {
