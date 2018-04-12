@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono|Permanent+Marker');
+
 .content {
     max-width: 1000px;
     margin: auto;
 }
 
+body {
+    font-family: 'Overpass Mono', monospace;
+    color: #00213A;
+}
+
 h1 { 
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
     text-align: center;  
     color: #00213A;
     animation: titleAnimation 1.5s 1 ease-in-out forwards;
@@ -13,12 +22,29 @@ h1 {
     background-image:linear-gradient(left, #00213A, #EDF7FE, #00213A);
     background-size:100% 1px;
     background-repeat:no-repeat;
-  }
+}
   
-  @keyframes titleAnimation {
+@keyframes titleAnimation {
      0% { letter-spacing: 10px; color: rgb(255, 255, 255); }
      100% { letter-spacing:0px; color: rgba(0,33,58) }
-  }
+}
+
+#budgetInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 10px 10px;
+}
+
+.budgetValLabel {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+}
+
+.budgetVal, .budgetValLabel {
+    text-align: center;
+}
 
 table { 
     width: 100%; 
@@ -31,9 +57,9 @@ tr:nth-of-type(odd) {
 }
 
 th { 
+    font-family: 'Permanent Marker', cursive;
     background: #00213A; 
     color: #EDF7FE; 
-    font-weight: bold; 
 }
 
 td, th { 
@@ -41,18 +67,39 @@ td, th {
     text-align: left; 
 }
 
-input {
+tr {
+    transition: all 0.3s ease-in;
+    text-decoration:none;
+}
+
+tr:hover {
+    text-shadow: 1px 0px 20px #54FEF3 ;
+}
+
+input[type=text] {
+    font-family: 'Overpass Mono', monospace;
     width: 100%;
+    border: 3px solid #ccc;
     padding: 12px 20px;
-    margin: 8px;
     box-sizing: border-box;
     border-radius: 4px;
 }
 
-button {
+input:focus {
+    border: 3px solid #555;
+}
+
+button, input[type=submit] {
+    font-family: 'Overpass Mono', monospace;
     width: 100%;
+    margin-top: 5px;
     padding: 5px;
     border-radius: 4px;
+    background-color: #EDF7FE;
+    color: #00213A;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
 }
 
 #newItemButton {
@@ -60,7 +107,7 @@ button {
 }
 
 @media 
-only screen and (max-width: 570px) {
+only screen and (max-width: 660px) {
 
 	table, thead, tbody, th, td, tr { 
 		display: block; 
