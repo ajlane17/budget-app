@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-const storageUrl = "//storage.adrianjlane.com";
+const storageUrl = "https://storage.adrianjlane.com";
 
 window.onload = function () {
     getRecords();
@@ -30,7 +30,7 @@ function createLineItems (xhr) {
 
     // get transaction data
     let response = JSON.parse(xhr.responseText);
-    let table = document.getElementById('transactions');
+    let table = document.getElementById('transactions').getElementsByTagName('tbody')[0];
     // for each line item
     response.forEach(function(element) {
         // create a table row with transaction details

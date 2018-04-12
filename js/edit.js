@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 let transaction = sessionStorage.transaction;
-const storageUrl = "//storage.adrianjlane.com";
+const storageUrl = "https://storage.adrianjlane.com";
 
 window.onload = function () {
     if (transaction != "") {
