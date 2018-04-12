@@ -58,6 +58,7 @@ tr:nth-of-type(odd) {
 
 th { 
     font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
     background: #00213A; 
     color: #EDF7FE; 
 }
@@ -68,12 +69,14 @@ td, th {
 }
 
 tr {
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
     text-decoration:none;
 }
 
 tr:hover {
     text-shadow: 1px 0px 20px #54FEF3 ;
+    background-color: #004C87;
+    color: #EDF7FE;
 }
 
 input[type=text] {
